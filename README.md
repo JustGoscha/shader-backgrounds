@@ -9,4 +9,4 @@ Shader-driven hero background with animated sun and mist.
 
 ## Live Demo
 
-- `https://justgoscha.github.io/shader-backgrounds`
+- [https://justgoscha.github.io/shader-backgrounds](https://justgoscha.github.io/shader-backgrounds)
