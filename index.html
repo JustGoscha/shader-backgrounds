@@ -22,8 +22,9 @@
         }
         
         .frosted-glass {
+            font-family: 'Inter', sans-serif;
             position: fixed;
-            top: 50%;
+            top: 80%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 50vw;
@@ -45,7 +46,24 @@
         .frosted-glass h1 {
             margin: 0 0 1rem 0;
             font-size: 2rem;
-            font-weight: 300;
+            font-weight: 800;
+        }
+
+        .frosted-glass h1 a {
+            color: transparent;
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ff6b35, #4a90e2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .frosted-glass h1 a:hover {
+            background: linear-gradient(145deg, #ffed4e, #ff8c42, #63a4ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transform: scale(1.05) translateX(0.25rem);
+            text-decoration: underline;
         }
 
         .frosted-glass p {
@@ -53,6 +71,7 @@
             font-size: 1.1rem;
             line-height: 1.5;
             opacity: 0.9;
+            font-weight: 300;
         }
     </style>
 </head>
@@ -68,7 +87,7 @@
     </script>
     
     <div class="frosted-glass box">
-        <h1>Introducing zenmemo</h1>
+        <h1>Introducing <a href="https://zenmemo.app">zenmemo</a></h1>
         <p>De-clutter your mind with audio journaling.<br>
         Gather insights, organize your day, take back control over your mind.</p>
     </div>
