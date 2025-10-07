@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shader Background - Sun & Mist</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #0a2332;
+        }
+        
+        #shader-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+        }
+        
+        .frosted-glass {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw;
+            min-width: 300px;
+            max-width: 500px;
+            height: auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 80, 120, 0.5);
+            border-radius: 22px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .frosted-glass h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .frosted-glass p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div id="shader-background"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+    <script type="module">
+        import { createSunMistBackground } from './sun-mist-background.js';
+        
+        // Initialize the shader background
+        const background = createSunMistBackground('#shader-background', { THREE });
+    </script>
+    
+    <div class="frosted-glass box">
+        <h1>Introducing zenmemo</h1>
+        <p>De-clutter your mind with audio journaling.<br>
+        Gather insights, organize your day, take back control over your mind.</p>
+    </div>
+</body>
+</html>
